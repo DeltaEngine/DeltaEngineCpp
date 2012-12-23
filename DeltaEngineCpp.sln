@@ -1,0 +1,169 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{AD935DFE-DC90-4FC5-A25C-96121B972192}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Graphics", "Graphics", "{230976D9-56D8-48E2-870A-B3C8FC864D29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{BBC7DFC5-AE51-4200-81C7-AFA47BA738BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7A0538EF-A85F-4C3C-8B26-3C89B7AEC5A3}"
+	ProjectSection(SolutionItems) = preProject
+		DeltaEngine.Core.h = DeltaEngine.Core.h
+		DeltaEngine.Datatypes.h = DeltaEngine.Datatypes.h
+		DeltaEngine.Graphics.h = DeltaEngine.Graphics.h
+		DeltaEngine.Graphics.OpenGL.h = DeltaEngine.Graphics.OpenGL.h
+		DeltaEngine.h = DeltaEngine.h
+		DeltaEngine.Platforms.h = DeltaEngine.Platforms.h
+		DeltaEngine.Platforms.Windows.h = DeltaEngine.Platforms.Windows.h
+		DeltaEngine.Rendering.h = DeltaEngine.Rendering.h
+		DeltaEngine.WindowsOpenGL.h = DeltaEngine.WindowsOpenGL.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Datatypes", "Datatypes", "{39259F5E-0AEE-4257-9E7B-045870BDBDD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C83540AF-42AD-426A-831F-EEB2FA302C76}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Graphics", "Graphics\DeltaEngine.Graphics.vcxproj", "{5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8} = {3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8}
+		{B0047E2C-D90B-4DC8-A659-CE8ECDC7CCED} = {B0047E2C-D90B-4DC8-A659-CE8ECDC7CCED}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Graphics.Tests", "Graphics\Tests\DeltaEngine.Graphics.Tests.vcxproj", "{59D5CF50-F10C-471D-83C4-A73DDAE1F5A4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2} = {5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Platforms", "Platforms\DeltaEngine.Platforms.vcxproj", "{4A8CF015-F41F-40AA-AA42-2B5A8774C8EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8DBC5914-BB29-46A9-B50C-4C37EA34C849} = {8DBC5914-BB29-46A9-B50C-4C37EA34C849}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Platforms.Windows", "Platforms\Windows\DeltaEngine.Platforms.Windows.vcxproj", "{9FE4B40B-A8C3-46A8-B053-9649C1525064}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8} = {3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8}
+		{B0047E2C-D90B-4DC8-A659-CE8ECDC7CCED} = {B0047E2C-D90B-4DC8-A659-CE8ECDC7CCED}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Platforms.Windows.Tests", "Platforms\Windows\Tests\DeltaEngine.Platforms.Windows.Tests.vcxproj", "{8CFCBD78-1985-492F-8451-DCF0838092F1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4A8CF015-F41F-40AA-AA42-2B5A8774C8EB} = {4A8CF015-F41F-40AA-AA42-2B5A8774C8EB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Datatypes", "Datatypes\DeltaEngine.Datatypes.vcxproj", "{B0047E2C-D90B-4DC8-A659-CE8ECDC7CCED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Datatypes.Tests", "Datatypes\Tests\DeltaEngine.Datatypes.Tests.vcxproj", "{C5A02999-80B2-48D1-9724-E137F6040711}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8} = {3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Core", "Core\DeltaEngine.Core.vcxproj", "{3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Core.Tests", "Core\Tests\DeltaEngine.Core.Tests.vcxproj", "{77C19BC2-ED9E-418B-BC96-87C1FACF06BE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Rendering", "Rendering\DeltaEngine.Rendering.vcxproj", "{61EA33C5-A73A-404C-AC47-3A3F70662CFF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8} = {3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8}
+		{5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2} = {5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rendering", "Rendering", "{5D699373-4C59-408F-9DEE-BACA07B2AB69}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Platforms.Tests", "Platforms\Tests\DeltaEngine.Platforms.Tests.vcxproj", "{C2EC8662-12BE-48E8-88B4-2436BB54EA3C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Graphics.OpenGL", "Graphics\OpenGL\DeltaEngine.Graphics.OpenGL.vcxproj", "{A1056705-1CF4-4825-92B7-C66F98F8CEF6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2} = {5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LogoApp", "Samples\LogoApp\LogoApp.vcxproj", "{1985C0EB-E596-4E08-9566-9BF1A806C540}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.WindowsOpenGL", "Platforms\WindowsOpenGL\DeltaEngine.WindowsOpenGL.vcxproj", "{FE09501E-6E3C-46B7-87A0-7B990125AFEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hypodermic", "Hypodermic", "{61FCA304-1585-4340-A51E-2CF64A80D8FF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hypodermic", "Hypodermic\Hypodermic.vcxproj", "{8DBC5914-BB29-46A9-B50C-4C37EA34C849}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Rendering.Tests", "Rendering\Tests\DeltaEngine.Rendering.Tests.vcxproj", "{BFA104AF-6720-4B63-8ED0-BF0E4F5F415F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.Graphics.OpenGL.Tests", "Graphics\OpenGL\Tests\Tests.vcxproj", "{57FE63D8-BA9C-4A29-9658-56FDEEBED6CC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.WindowsOpenGL.VisualTests", "Platforms\WindowsOpenGL\VisualTests\DeltaEngine.WindowsOpenGL.VisualTests.vcxproj", "{F026A286-9711-4B26-ABD4-AEF19DD91435}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeltaEngine.WindowsOpenGL.Tests", "Platforms\WindowsOpenGL\Tests\Tests.vcxproj", "{A89347DB-9448-46BF-A221-B8BB507FA859}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LogoApp.Tests", "Samples\LogoApp\Tests\Tests.vcxproj", "{AC201ABA-E78D-4A1D-8D1E-700801267423}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2}.Release|Win32.ActiveCfg = Release|Win32
+		{5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2}.Release|Win32.Build.0 = Release|Win32
+		{59D5CF50-F10C-471D-83C4-A73DDAE1F5A4}.Release|Win32.ActiveCfg = Release|Win32
+		{59D5CF50-F10C-471D-83C4-A73DDAE1F5A4}.Release|Win32.Build.0 = Release|Win32
+		{4A8CF015-F41F-40AA-AA42-2B5A8774C8EB}.Release|Win32.ActiveCfg = Release|Win32
+		{4A8CF015-F41F-40AA-AA42-2B5A8774C8EB}.Release|Win32.Build.0 = Release|Win32
+		{9FE4B40B-A8C3-46A8-B053-9649C1525064}.Release|Win32.ActiveCfg = Release|Win32
+		{9FE4B40B-A8C3-46A8-B053-9649C1525064}.Release|Win32.Build.0 = Release|Win32
+		{8CFCBD78-1985-492F-8451-DCF0838092F1}.Release|Win32.ActiveCfg = Release|Win32
+		{8CFCBD78-1985-492F-8451-DCF0838092F1}.Release|Win32.Build.0 = Release|Win32
+		{B0047E2C-D90B-4DC8-A659-CE8ECDC7CCED}.Release|Win32.ActiveCfg = Release|Win32
+		{B0047E2C-D90B-4DC8-A659-CE8ECDC7CCED}.Release|Win32.Build.0 = Release|Win32
+		{C5A02999-80B2-48D1-9724-E137F6040711}.Release|Win32.ActiveCfg = Release|Win32
+		{C5A02999-80B2-48D1-9724-E137F6040711}.Release|Win32.Build.0 = Release|Win32
+		{3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8}.Release|Win32.ActiveCfg = Release|Win32
+		{3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8}.Release|Win32.Build.0 = Release|Win32
+		{77C19BC2-ED9E-418B-BC96-87C1FACF06BE}.Release|Win32.ActiveCfg = Release|Win32
+		{77C19BC2-ED9E-418B-BC96-87C1FACF06BE}.Release|Win32.Build.0 = Release|Win32
+		{61EA33C5-A73A-404C-AC47-3A3F70662CFF}.Release|Win32.ActiveCfg = Release|Win32
+		{61EA33C5-A73A-404C-AC47-3A3F70662CFF}.Release|Win32.Build.0 = Release|Win32
+		{C2EC8662-12BE-48E8-88B4-2436BB54EA3C}.Release|Win32.ActiveCfg = Release|Win32
+		{C2EC8662-12BE-48E8-88B4-2436BB54EA3C}.Release|Win32.Build.0 = Release|Win32
+		{A1056705-1CF4-4825-92B7-C66F98F8CEF6}.Release|Win32.ActiveCfg = Release|Win32
+		{A1056705-1CF4-4825-92B7-C66F98F8CEF6}.Release|Win32.Build.0 = Release|Win32
+		{1985C0EB-E596-4E08-9566-9BF1A806C540}.Release|Win32.ActiveCfg = Release|Win32
+		{1985C0EB-E596-4E08-9566-9BF1A806C540}.Release|Win32.Build.0 = Release|Win32
+		{FE09501E-6E3C-46B7-87A0-7B990125AFEC}.Release|Win32.ActiveCfg = Release|Win32
+		{FE09501E-6E3C-46B7-87A0-7B990125AFEC}.Release|Win32.Build.0 = Release|Win32
+		{8DBC5914-BB29-46A9-B50C-4C37EA34C849}.Release|Win32.ActiveCfg = Release|Win32
+		{8DBC5914-BB29-46A9-B50C-4C37EA34C849}.Release|Win32.Build.0 = Release|Win32
+		{BFA104AF-6720-4B63-8ED0-BF0E4F5F415F}.Release|Win32.ActiveCfg = Release|Win32
+		{BFA104AF-6720-4B63-8ED0-BF0E4F5F415F}.Release|Win32.Build.0 = Release|Win32
+		{57FE63D8-BA9C-4A29-9658-56FDEEBED6CC}.Release|Win32.ActiveCfg = Release|Win32
+		{57FE63D8-BA9C-4A29-9658-56FDEEBED6CC}.Release|Win32.Build.0 = Release|Win32
+		{F026A286-9711-4B26-ABD4-AEF19DD91435}.Release|Win32.ActiveCfg = Release|Win32
+		{F026A286-9711-4B26-ABD4-AEF19DD91435}.Release|Win32.Build.0 = Release|Win32
+		{A89347DB-9448-46BF-A221-B8BB507FA859}.Release|Win32.ActiveCfg = Release|Win32
+		{A89347DB-9448-46BF-A221-B8BB507FA859}.Release|Win32.Build.0 = Release|Win32
+		{AC201ABA-E78D-4A1D-8D1E-700801267423}.Release|Win32.ActiveCfg = Release|Win32
+		{AC201ABA-E78D-4A1D-8D1E-700801267423}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A8CF015-F41F-40AA-AA42-2B5A8774C8EB} = {AD935DFE-DC90-4FC5-A25C-96121B972192}
+		{9FE4B40B-A8C3-46A8-B053-9649C1525064} = {AD935DFE-DC90-4FC5-A25C-96121B972192}
+		{8CFCBD78-1985-492F-8451-DCF0838092F1} = {AD935DFE-DC90-4FC5-A25C-96121B972192}
+		{C2EC8662-12BE-48E8-88B4-2436BB54EA3C} = {AD935DFE-DC90-4FC5-A25C-96121B972192}
+		{FE09501E-6E3C-46B7-87A0-7B990125AFEC} = {AD935DFE-DC90-4FC5-A25C-96121B972192}
+		{F026A286-9711-4B26-ABD4-AEF19DD91435} = {AD935DFE-DC90-4FC5-A25C-96121B972192}
+		{A89347DB-9448-46BF-A221-B8BB507FA859} = {AD935DFE-DC90-4FC5-A25C-96121B972192}
+		{5A33E8A0-C1BB-4EF6-85AE-AF59778D24A2} = {230976D9-56D8-48E2-870A-B3C8FC864D29}
+		{59D5CF50-F10C-471D-83C4-A73DDAE1F5A4} = {230976D9-56D8-48E2-870A-B3C8FC864D29}
+		{A1056705-1CF4-4825-92B7-C66F98F8CEF6} = {230976D9-56D8-48E2-870A-B3C8FC864D29}
+		{57FE63D8-BA9C-4A29-9658-56FDEEBED6CC} = {230976D9-56D8-48E2-870A-B3C8FC864D29}
+		{1985C0EB-E596-4E08-9566-9BF1A806C540} = {BBC7DFC5-AE51-4200-81C7-AFA47BA738BD}
+		{AC201ABA-E78D-4A1D-8D1E-700801267423} = {BBC7DFC5-AE51-4200-81C7-AFA47BA738BD}
+		{B0047E2C-D90B-4DC8-A659-CE8ECDC7CCED} = {39259F5E-0AEE-4257-9E7B-045870BDBDD8}
+		{C5A02999-80B2-48D1-9724-E137F6040711} = {39259F5E-0AEE-4257-9E7B-045870BDBDD8}
+		{3F92E025-6D7E-4DD4-AFCA-BACD9D4966E8} = {C83540AF-42AD-426A-831F-EEB2FA302C76}
+		{77C19BC2-ED9E-418B-BC96-87C1FACF06BE} = {C83540AF-42AD-426A-831F-EEB2FA302C76}
+		{61EA33C5-A73A-404C-AC47-3A3F70662CFF} = {5D699373-4C59-408F-9DEE-BACA07B2AB69}
+		{BFA104AF-6720-4B63-8ED0-BF0E4F5F415F} = {5D699373-4C59-408F-9DEE-BACA07B2AB69}
+		{8DBC5914-BB29-46A9-B50C-4C37EA34C849} = {61FCA304-1585-4340-A51E-2CF64A80D8FF}
+	EndGlobalSection
+EndGlobal
