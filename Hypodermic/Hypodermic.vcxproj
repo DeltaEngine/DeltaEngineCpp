@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8DBC5914-BB29-46A9-B50C-4C37EA34C849}</ProjectGuid>
+    <RootNamespace>Hypodermic</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)..\lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)..\lib\x64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>hypodermic-vc$(PlatformToolsetVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(ProjectDir)..\obj\$(Configuration)_$(Platform)_$(PlatformToolsetVersion)\$(ProjectName)\</IntDir>
+    <TargetName>hypodermic-vc$(PlatformToolsetVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)..\lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)..\lib\x64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>hypodermic-vc$(PlatformToolsetVersion)-d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(ProjectDir)..\obj\$(Configuration)_$(Platform)_$(PlatformToolsetVersion)\$(ProjectName)\</IntDir>
+    <TargetName>hypodermic-vc$(PlatformToolsetVersion)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(BOOST_HOME);$(SolutionDir);$(DeltaEngineCppPath)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(BOOST_HOME);..</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(BOOST_HOME);$(SolutionDir);$(DeltaEngineCppPath)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_MBCS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(BOOST_HOME);..</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_MBCS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ActivatedData.h" />
+    <ClInclude Include="ActivatingData.h" />
+    <ClInclude Include="AutowiredConstructor.h" />
+    <ClInclude Include="BoostUuidHashFunctor.h" />
+    <ClInclude Include="CircularDependencyDetector.h" />
+    <ClInclude Include="ComponentRegistration.h" />
+    <ClInclude Include="ComponentRegistry.h" />
+    <ClInclude Include="Container.h" />
+    <ClInclude Include="ContainerActivator.h" />
+    <ClInclude Include="ContainerBuilder.h" />
+    <ClInclude Include="ContainerBuilder.hpp" />
+    <ClInclude Include="CurrentLifetimeScope.h" />
+    <ClInclude Include="DelegateActivator.h" />
+    <ClInclude Include="DelegateActivator.hpp" />
+    <ClInclude Include="DependencyResolutionException.h" />
+    <ClInclude Include="Helpers.h" />
+    <ClInclude Include="IActivatedData.h" />
+    <ClInclude Include="IActivatingData.h" />
+    <ClInclude Include="IComponentContext.h" />
+    <ClInclude Include="IComponentContext.hpp" />
+    <ClInclude Include="IComponentLifetime.h" />
+    <ClInclude Include="IComponentRegistration.h" />
+    <ClInclude Include="IComponentRegistry.h" />
+    <ClInclude Include="IContainer.h" />
+    <ClInclude Include="IInitializable.h" />
+    <ClInclude Include="IInstanceActivator.h" />
+    <ClInclude Include="IInstanceLookup.h" />
+    <ClInclude Include="ILifetimeScope.h" />
+    <ClInclude Include="InstanceActivator.h" />
+    <ClInclude Include="InstanceLookup.h" />
+    <ClInclude Include="InstanceOwnership.h" />
+    <ClInclude Include="InstanceSharing.h" />
+    <ClInclude Include="IPreparingData.h" />
+    <ClInclude Include="IRegistrationBuilder.h" />
+    <ClInclude Include="IResolveOperation.h" />
+    <ClInclude Include="ISharingLifetimeScope.h" />
+    <ClInclude Include="ITypeCaster.h" />
+    <ClInclude Include="KeyedService.h" />
+    <ClInclude Include="LifetimeScope.h" />
+    <ClInclude Include="NullptrWorkaround.h" />
+    <ClInclude Include="PreparingData.h" />
+    <ClInclude Include="ProvidedInstanceActivator.h" />
+    <ClInclude Include="ProvidedInstanceActivator.hpp" />
+    <ClInclude Include="RegistrationBuilder.h" />
+    <ClInclude Include="RegistrationBuilder.hpp" />
+    <ClInclude Include="RegistrationBuilderFactory.h" />
+    <ClInclude Include="RegistrationBuilderFactory.hpp" />
+    <ClInclude Include="RegistrationData.h" />
+    <ClInclude Include="ResolveOperation.h" />
+    <ClInclude Include="RootScopeLifetime.h" />
+    <ClInclude Include="Service.h" />
+    <ClInclude Include="ServiceKey.h" />
+    <ClInclude Include="ServiceRegistrationInfo.h" />
+    <ClInclude Include="SingleRegistrationStyle.h" />
+    <ClInclude Include="TypeCaster.h" />
+    <ClInclude Include="TypeCaster.hpp" />
+    <ClInclude Include="TypedService.h" />
+    <ClInclude Include="TypeIndexWorkaround.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CircularDependencyDetector.cpp" />
+    <ClCompile Include="ComponentRegistration.cpp" />
+    <ClCompile Include="ComponentRegistry.cpp" />
+    <ClCompile Include="Container.cpp" />
+    <ClCompile Include="ContainerActivator.cpp" />
+    <ClCompile Include="ContainerBuilder.cpp" />
+    <ClCompile Include="CurrentLifetimeScope.cpp" />
+    <ClCompile Include="DependencyResolutionException.cpp" />
+    <ClCompile Include="InstanceActivator.cpp" />
+    <ClCompile Include="InstanceLookup.cpp" />
+    <ClCompile Include="KeyedService.cpp" />
+    <ClCompile Include="LifetimeScope.cpp" />
+    <ClCompile Include="RegistrationData.cpp" />
+    <ClCompile Include="ResolveOperation.cpp" />
+    <ClCompile Include="RootScopeLifetime.cpp" />
+    <ClCompile Include="ServiceKey.cpp" />
+    <ClCompile Include="ServiceRegistrationInfo.cpp" />
+    <ClCompile Include="SingleRegistrationStyle.cpp" />
+    <ClCompile Include="TypedService.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

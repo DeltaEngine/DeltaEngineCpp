@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ObjectTests.cpp" />
+    <ClCompile Include="StringTests.cpp" />
+    <ClCompile Include="ListTests.cpp" />
+    <ClCompile Include="KeyValueTests.cpp" />
+    <ClCompile Include="HashtableTests.cpp" />
+    <ClCompile Include="ExceptionTests.cpp" />
+    <ClCompile Include="MathExtensionTests.cpp" />
+    <ClCompile Include="LinkedListTests.cpp" />
+    <ClCompile Include="TimeTests.cpp" />
+    <ClCompile Include="PseudoRandomTests.cpp" />
+    <ClCompile Include="ResolverTests.cpp" />
+    <ClCompile Include="RunnerTests.cpp" />
+    <ClCompile Include="EnumeratorTests.cpp" />
+    <ClCompile Include="ArrayHelperTests.cpp" />
+    <ClCompile Include="StringHelperTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MockElapsedTime.h" />
+    <ClInclude Include="MockWindow.h" />
+    <ClInclude Include="MockDevice.h" />
+    <ClInclude Include="CppUnitTestCoreSupport.h" />
+  </ItemGroup>
+</Project>
