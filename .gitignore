@@ -31,7 +31,6 @@
 ipch/
 obj/
 [Bb]in
-[Dd]ebug*/
 [Rr]elease*/
 *.sln.ide
 *.pidb
